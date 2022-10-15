@@ -1,0 +1,30 @@
+
+
+<input type="hidden" name="lat" id="lat" value="" />
+    <input type="hidden" name="long" id="long" value=""/>
+    
+    
+    
+<script>
+navigator.geolocation.getCurrentPosition(function(position) {
+    $('#lat').val(position.coords.latitude);
+  $('#long').val(position.coords.longitude);
+  var requestOptions = {
+  method: 'GET',
+};
+
+var lt = document.getElementById('lat').value;
+var long = document.getElementById('long').value;
+var uri = "https://api.geoapify.com/v1/geocode/reverse?lat=" + lt + "&lon=" + long + "&apiKey=6dadf550831043f582bca35bb33c715f";
+// "https://api.geoapify.com/v1/geocode/reverse?lat=51.21709661403662&lon=6.7782883744862374&apiKey=6dadf550831043f582bca35bb33c715f"
+fetch(uri, requestOptions)
+  .then(response => response.json())
+  .then(result => console.log(result.features[0].properties.formatted))
+  .catch(error => console.log('error', error));
+  
+}, function() {
+    alert('Kinedly Enable GPS location of Your Device and Then Start New Inspection ');
+  window.history.back();
+   
+});
+</script>
