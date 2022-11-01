@@ -1,0 +1,10 @@
+// following lines of PHP code into config/config.php file:
+
+ini_set( 'session.gc_probability',  1 );
+ini_set( 'session.gc_divisor',      100 );
+
+
+// Theoretically, this means that the garbage collector usually runs once every 100th request.
+// It's more than enough, but it is up to you whether that causes too many unnecessary hits to database.
+// An alternative solution for heavy-traffic websites could be having a 0% probability on the production site
+// and a Cronjob-based script which removes database rows of the expired sessions.
