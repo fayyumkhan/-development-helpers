@@ -1,5 +1,9 @@
 // following lines of PHP code into config/config.php file:
 
+check first 
+sess_regenerate_destroy = false
+
+
 ini_set( 'session.gc_probability',  1 );
 ini_set( 'session.gc_divisor',      100 );
 
