@@ -1,0 +1,1 @@
+<a target="blank" href="http://maps.google.com/?q=<?php echo $val->lat ?>,<?php echo $val->long ?>">
