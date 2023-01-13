@@ -1,0 +1,29 @@
+* for copy past *
+1) copyQ - app 
+
+
+* for icons *
+1) material icones - web
+2) feather icones - web
+
+
+* for imeges - web *
+1) unsplash.com // api return random img
+2) pexels.com 
+3) pixabay.com
+4) mixkit.com
+
+* for api - web *
+1) json placeholder  // just for fake api
+2) json formeter(extention) // for formating json data on browser
+3) postman // for testing api's
+
+
+* for seo *
+1) lighthouse
+2) compresser.io // for reduse imege size 
+3) tinypng.com // for reduse imege size 
+
+
+* VS tools *
+1) material icon theme
