@@ -1,0 +1,5 @@
+ $mpdf = new \Mpdf\Mpdf(['mode' => 'utf-8', 'format' => [89, 51], 'default_font_size'=> '10', 'default_font'=> 'freeserif', 'margin_left'=>0,'margin_right'=>0,'margin_top'=>0,'margin_bottom'=>0,'margin_header'=>0,'margin_footer'=>0]);
+      $html = $this->load->view('settlement/webview_idcard_pdf',[],true);
+      $mpdf->WriteHTML($html);
+      $mpdf->Output("my_card.pdg","I"); // opens in browser
+      //$mpdf->Output('arjun.pdf','D'); // it downloads the file into the user system, with give name
